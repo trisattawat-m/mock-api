@@ -1,26 +1,25 @@
-functionsDirectory = "/opt/build/repo/src/index"
 functionsDirectoryOrigin = "ui"
 plugins = []
 headers = []
 redirects = []
 
 [functions]
-  [functions."*"]
+  [functions."*"]
 
 [build]
-publish = "/opt/build/repo"
+publish = "dist"
 publishOrigin = "default"
 commandOrigin = "ui"
-command = "npm ci && npm install -g @nestjs/cli && npm run prisma:generate && npm run prisma:migrate:deploy && npm run build"
-functions = "/opt/build/repo/src/index"
+command = "npm ci && npm run prisma:generate && npm run prisma:migrate:deploy && npm run build"
 
-  [build.environment]
-    NODE_ENV = "production"
+functions = "dist/src/index"
+  [build.environment]
+    NODE_ENV = "production"
 
-  [build.processing]
-    [build.processing.css]
-    [build.processing.html]
-    [build.processing.images]
-    [build.processing.js]
+  [build.processing]
+    [build.processing.css]
+    [build.processing.html]
+    [build.processing.images]
+    [build.processing.js]
 
-  [build.services]
+  [build.services]
