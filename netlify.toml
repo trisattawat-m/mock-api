@@ -10,7 +10,8 @@ redirects = []
 publish = "dist"
 publishOrigin = "default"
 commandOrigin = "ui"
-command = "npm ci && npm install -g @nestjs/cli && npm run prisma:generate && npm run prisma:migrate:deploy && npm run build"
+# CRITICAL FIX: Removed the unstable global install command.
+command = "npm ci && npm run prisma:generate && npm run prisma:migrate:deploy && npm run build"
 functions = "dist"
 
   [build.environment]
