@@ -1,29 +1,13 @@
+[build]
+  publish = "dist"                         # dummy folder since backend-only
+  functions = "dist"                       # points to compiled index.serverless.js
+  command = "npm ci && npm run prisma:generate && npm run build"
+
+[build.environment]
+  NODE_ENV = "production"
+
 [[redirects]]
   from = "/*"
-  to = "/.netlify/functions/index/:splat"
+  to = "/.netlify/functions/index.serverless"
   status = 200
   force = true
-
-functionsDirectoryOrigin = "ui"
-plugins = []
-headers = []
-redirects = []
-
-[functions]
-  [functions."*"]
-
-[build]
-publish = "dist"
-publishOrigin = "default"
-commandOrigin = "ui"
-command = "npm ci && npm run prisma:generate && npm run prisma:migrate:deploy && npm install -g @nestjs/cli && npm run build"
-functions = "dist/index.js"
-  [build.environment]
-    NODE_ENV = "production"
-
-  [build.processing]
-    [build.processing.css]
-    [build.processing.html]
-    [build.processing.images]
-    [build.processing.js]
-  [build.services]
