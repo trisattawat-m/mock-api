@@ -12,7 +12,7 @@ publishOrigin = "default"
 commandOrigin = "ui"
 # FINAL FIX: Explicitly install the NestJS CLI locally before the build step.
 command = "npm ci && npm run prisma:generate && npm run prisma:migrate:deploy && npm install -g @nestjs/cli && npm run build"
-functions = "dist/index.js"
+functions = "/opt/build/repo/src/index"
 
   [build.environment]
     NODE_ENV = "production"
