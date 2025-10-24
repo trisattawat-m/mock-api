@@ -12,7 +12,7 @@ publishOrigin = "default"
 commandOrigin = "ui"
 command = "npm ci && npm install -g @nestjs/cli && npm run prisma:generate && npm run prisma:migrate:deploy && npm run build"
 
-functions = "dist/src/index"
+functions = "node dist/src/index"
 
   [build.environment]
     NODE_ENV = "production"
