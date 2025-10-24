@@ -1,6 +1,6 @@
 datasource db {
-  provider = "sqlserver"
-  url      = env("MSSQL_URL")
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 generator client {
@@ -31,3 +31,4 @@ model WimBacklog {
   @@index([crossingIndexCode])
   @@map("WimBacklog")
 }
+
