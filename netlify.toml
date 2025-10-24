@@ -11,7 +11,7 @@ publish = "dist"
 publishOrigin = "default"
 commandOrigin = "ui"
 # FINAL FIX: Explicitly install the NestJS CLI locally before the build step.
-command = "npm ci && npm run prisma:generate && npm run prisma:migrate:deploy && npm install @nestjs/cli && npm run build"
+command = "npm ci && npm run prisma:generate && npm run prisma:migrate:deploy && npm install -g @nestjs/cli && npm run build"
 functions = "dist"
 
   [build.environment]
