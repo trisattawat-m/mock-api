@@ -11,7 +11,7 @@ publish = "dist"
 publishOrigin = "default"
 commandOrigin = "ui"
 # CRITICAL FIX: Removed the unstable global install command.
-command = "npm ci && npm run prisma:generate && npm run prisma:migrate:deploy && npm run build"
+command = "npm ci && npm run prisma:generate && npm run prisma:migrate:deploy && npm install @nestjs/cli && npm run build"
 functions = "dist"
 
   [build.environment]
