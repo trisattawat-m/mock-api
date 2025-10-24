@@ -1,3 +1,3 @@
 export interface EcmWimAdapterPort {
-  ecmWimEventTask(): Promise<any>;
+  createEcmWimDataEventTask(): Promise<any>;
 }

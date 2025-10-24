@@ -2,6 +2,8 @@ import { Injectable } from '@nestjs/common';
 import { WimRepositoryPort } from './wim.repository.port';
 import { PrismaService } from '@infrastructure/prisma/prisma.service';
 import { CentralizeCenterWimRequest } from '@applications/schemas/request/centralized-service.request';
+import { PaginationRequest } from '@applications/schemas/shared/request/pagination.shared';
+import { PaginationResponse } from '@applications/schemas/shared/response/paginated.shared';
 
 @Injectable()
 export class WimRepository implements WimRepositoryPort {
@@ -55,5 +57,28 @@ export class WimRepository implements WimRepositoryPort {
         throw new Error('Failed to save WIM data');
       }
     }
+  }
+
+  async getWimData(
+    query: PaginationRequest,
+  ): Promise<{ data: any[]; total: number }> {
+    const { page = 1, perPage = 20, sortBy, sortOrder = 'asc' } = query;
+
+    const skip = (page - 1) * perPage;
+    const orderBy =
+      sortBy && ['asc', 'desc'].includes(sortOrder)
+        ? { [sortBy]: sortOrder }
+        : undefined;
+
+    const [data, total] = await Promise.all([
+      this._prisma.wimBacklog.findMany({
+        skip,
+        take: perPage,
+        orderBy,
+      }),
+      this._prisma.wimBacklog.count(),
+    ]);
+
+    return { data, total };
   }
 }

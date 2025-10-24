@@ -13,7 +13,7 @@ export class EcmWimAdapter implements EcmWimAdapterPort {
     });
   }
 
-  async ecmWimEventTask(): Promise<any> {
+  async createEcmWimDataEventTask(): Promise<any> {
     try {
       const { data: result } = await this.axiosInstance.post(
         `.netlify/functions/soap-mock/VehicleDetectionService`,
