@@ -4,7 +4,7 @@ headers = []
 redirects = []
 
 [functions]
-  [functions."*"]
+  [functions."*"]
 
 [build]
 publish = "dist"
@@ -15,13 +15,13 @@ command = "npm ci && npm run prisma:generate && npm run prisma:migrate:deploy &&
 
 functions = "dist"
 
-  [build.environment]
-    NODE_ENV = "production"
+  [build.environment]
+    NODE_ENV = "production"
 
-  [build.processing]
-    [build.processing.css]
-    [build.processing.html]
-    [build.processing.images]
-    [build.processing.js]
+  [build.processing]
+    [build.processing.css]
+    [build.processing.html]
+    [build.processing.images]
+    [build.processing.js]
 
-  [build.services]
+  [build.services]
