@@ -1,5 +1,5 @@
 datasource db {
-  provider = "sqlserver"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -11,21 +11,21 @@ model WimBacklog {
   id                String   @id @default(uuid())
   crossingIndexCode String   @unique @map("crossingIndexCode") @db.VarChar(64)
   datetime          DateTime @map("datetime")
-  plate             String   @map("plate") @db.NText
-  plateProvince     String?  @map("plate_province") @db.NText
+  plate             String   @map("plate") @db.Text
+  plateProvince     String?  @map("plate_province") @db.Text
   totalAxles        Int      @map("total_axles")
   totalLength       Float    @map("total_length")
   totalWidth        Float    @map("total_width")
-  outcome           String   @map("outcome") @db.NText
+  outcome           String   @map("outcome") @db.Text
   totalWeight       Float    @map("total_weight")
   weightLimit       Float    @map("weight_limit")
   speed             Float?   @map("speed")
-  vehicleClass      String?  @map("vehicle_class") @db.NText
-  vehicleType       String?  @map("vehicle_type") @db.NText
-  lane              String   @default("1") @map("lane") @db.NText
+  vehicleClass      String?  @map("vehicle_class") @db.Text
+  vehicleType       String?  @map("vehicle_type") @db.Text
+  lane              String   @default("1") @map("lane") @db.Text
   overviewImage     String?  @map("overview_image") @db.Text
   plateImage        String?  @map("plate_image") @db.Text
-  axlesJson         String?  @map("axles") @db.NText
+  axlesJson         String?  @map("axles") @db.Text
   createdAt         DateTime @default(now()) @map("created_at")
 
   @@index([crossingIndexCode])
