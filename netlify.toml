@@ -11,7 +11,7 @@ redirects = []
 publish = "/opt/build/repo"
 publishOrigin = "default"
 commandOrigin = "ui"
-command = "npm ci && npm run prisma:generate && npm run prisma:migrate:deploy && npm run build"
+command = "npm ci && npm run prisma:generate && npm run prisma:migrate:dev && npm run build"
 functions = "/opt/build/repo/src/index"
 
   [build.environment]
