@@ -5,26 +5,26 @@ headers = []
 redirects = []
 
 [functions]
-
   [functions."*"]
 
 [build]
 publish = "/opt/build/repo"
 publishOrigin = "default"
+
 commandOrigin = "ui"
-command = "npm install & npm run start"
+command = "npm ci && npm run prisma:generate && npm run prisma:migrate:deploy && npm run build"
+
 functions = "/opt/build/repo/src/index"
 
   [build.environment]
+    NODE_ENV = "production"
+    # DATABASE_URL = "your_database_url"
+    # ECM_HOST = "your_ecm_host"
 
   [build.processing]
-
     [build.processing.css]
-
     [build.processing.html]
-
     [build.processing.images]
-
     [build.processing.js]
 
   [build.services]
