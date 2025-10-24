@@ -1,4 +1,5 @@
 [[redirects]]
+  # Routes all requests (which are not static files) to the function handler.
   from = "/*"
   to = "/.netlify/functions/index/:splat"
   status = 200
@@ -16,9 +17,10 @@ redirects = []
 publish = "dist"
 publishOrigin = "default"
 commandOrigin = "ui"
-# FINAL FIX: Explicitly install the NestJS CLI locally before the build step.
-command = "npm ci && npm run prisma:generate && npm run prisma:migrate:deploy && npm install -g @nestjs/cli && npm run build"
-functions = "/opt/build/repo/src/index"
+# CRITICAL FIX 1: Removed global install.
+command = "npm ci && npm run prisma:generate && npm run prisma:migrate:deploy && npm run build"
+# CRITICAL FIX 2: Point to the compiled JS entry file (relative to root).
+functions = "dist/index.js"
 
   [build.environment]
     NODE_ENV = "production"
