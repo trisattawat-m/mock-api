@@ -4,23 +4,24 @@ headers = []
 redirects = []
 
 [functions]
-  [functions."*"]
+  [functions."*"]
 
 [build]
 publish = "dist"
 publishOrigin = "default"
 commandOrigin = "ui"
-command = "npm ci && npm install -g @nestjs/cli && npm run prisma:generate && npm run prisma:migrate:deploy && npm run build"
 
-functions = "node dist/src/index"
+command = "npm ci && npm run prisma:generate && npm run prisma:migrate:deploy && npm run build"
 
-  [build.environment]
-    NODE_ENV = "production"
+functions = "dist"
 
-  [build.processing]
-    [build.processing.css]
-    [build.processing.html]
-    [build.processing.images]
-    [build.processing.js]
+  [build.environment]
+    NODE_ENV = "production"
 
-  [build.services]
+  [build.processing]
+    [build.processing.css]
+    [build.processing.html]
+    [build.processing.images]
+    [build.processing.js]
+
+  [build.services]
