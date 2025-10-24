@@ -1,0 +1,21 @@
+export enum SERVICES {
+  WIM_SERVICE = 'WIM_SERVICE',
+}
+
+export enum REPOSITORY {
+  WIM_REPOSITORY = 'WIM_REPOSITORY',
+}
+
+export enum ADAPTERS {
+  CENTRALIZE_CENTER_ADAPTER = 'CENTRALIZE_CENTER_ADAPTER',
+  ECM_WIM_ADAPTER = 'ECM_WIM_ADAPTER',
+}
+
+export enum DOMAIN {
+  HEALTH = 'health',
+  WIM = 'wim',
+}
+
+export enum CRON_SERVICES {
+  ECM_WIM_CRON_SERVICE = 'ECM_WIM_CRON_SERVICE',
+}

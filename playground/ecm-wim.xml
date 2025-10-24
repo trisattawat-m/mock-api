@@ -1,0 +1,75 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soap:Body>
+        <tns:ProcessVehicleDetectionResponse xmlns:tns="http://tempuri.org/VehicleDetectionService">
+            <tns:ProcessVehicleDetectionResult>
+                <VehicleDetectionCollection Count="2">
+                    <Detection>
+                        <Vehicle ID_="303000" LN="1" SN="75" DATE_VEH_="2025-10-22T02:37:04.797"
+                            DATE_VEH_END_="2025-10-22T02:37:05.914" BOOL_CE_ANPR_="False"
+                            PLATE_NUM_FRONT_ANPR_="-" COUNTRY_CODE_FRONT_ANPR_="TH"
+                            DATE_PLATE_FRONT_ANPR_="" DATE_SH_FIRST_AXLE_="2025-10-22T02:37:04.987"
+                            PLATE_NUM_REAR_ANPR_="-" COUNTRY_CODE_REAR_ANPR_=""
+                            DATE_PLATE_REAR_ANPR_="" PLATE_TMD_1_="" PLATE_TMD_2_="" PLATE_TMD_3_=""
+                            PLATE_TMD_4_="" PLATE_TMD_5_="" BOOL_TMD_ANPR_="False"
+                            DATE_REMOTE_1_="2025-10-22T02:38:04.797"
+                            DATE_REMOTE_2_="2025-10-22T02:39:04.797"
+                            REQUEST_ID_="831bb2a5-d155-4130-94db-173e38652117"
+                            PIC_ROOT_ALIAS_="PhotosRoot">
+                            <Category CA="12" SBCA="40" SC="12" MW_="19128" AN="4" />
+                            <Measure SPEE="130" SPEE_EXCESS_="40" LENG="2319" LENG_EXCESS_="0"
+                                VVTM_="214" VVDT="2571" DTB1="102" DTLB="334" TOWT_KG_="22593"
+                                TOWT_EXCESS_="0" TOWT_VALID_="V" TOWL_KG_="11296" TOWR_KG_="11297"
+                                PICTURE_="010" INFRACTION_1_="1" INFRACTION_2_="0" INFRACTION_3_="0"
+                                OVERLAP_="False" AVOIDANCE_="False" UNCENTERED_="True" />
+                            <Axle n="1" WT_="5034" WT_EXCESS_="0" WT_QUALIT_="1" DT="250"
+                                WTL_="2517" WTR_="2517" WTLR_BOOL_MEAS_="False" WD="225" SH="-23" />
+                            <Axle n="2" WT_="5012" WT_EXCESS_="0" WT_QUALIT_="2" DT="495"
+                                WTL_="2506" WTR_="2506" WTLR_BOOL_MEAS_="False" WD="190" SH="-27" />
+                            <Axle n="3" WT_="5529" WT_EXCESS_="0" WT_QUALIT_="1" DT="106"
+                                WTL_="2764" WTR_="2765" WTLR_BOOL_MEAS_="False" WD="210" SH="-42" />
+                            <Axle n="4" WT_="7018" WT_EXCESS_="0" WT_QUALIT_="2" DT="496"
+                                WTL_="3509" WTR_="3509" WTLR_BOOL_MEAS_="True" WD="197" SH="-50" />
+                            <AxleGroup n="1" AG_TYPE_="1" AG_TOWT_="5034" AG_TOWT_EXCESS_="0"
+                                AG_WT_AXLE_1_="5034" />
+                            <AxleGroup n="3" AG_TYPE_="2" AG_TOWT_="12547" AG_TOWT_EXCESS_="0"
+                                AG_WT_AXLE_1_="5529" AG_WT_AXLE_2_="7018" />
+                        </Vehicle>
+                    </Detection>
+                    <Detection>
+                        <Vehicle ID_="303001" LN="3" SN="78" DATE_VEH_="2025-10-22T02:36:04.797"
+                            DATE_VEH_END_="2025-10-22T02:36:05.700" BOOL_CE_ANPR_="True"
+                            PLATE_NUM_FRONT_ANPR_="7ฌบ 4434" COUNTRY_CODE_FRONT_ANPR_="TH"
+                            DATE_PLATE_FRONT_ANPR_="2025-10-22T02:36:04.797"
+                            DATE_SH_FIRST_AXLE_="2025-10-22T02:36:04.982" PLATE_NUM_REAR_ANPR_="-"
+                            COUNTRY_CODE_REAR_ANPR_="" DATE_PLATE_REAR_ANPR_="" PLATE_TMD_1_=""
+                            PLATE_TMD_2_="" PLATE_TMD_3_="" PLATE_TMD_4_="" PLATE_TMD_5_=""
+                            BOOL_TMD_ANPR_="False" DATE_REMOTE_1_="2025-10-22T02:37:04.797"
+                            DATE_REMOTE_2_="2025-10-22T02:38:04.797"
+                            REQUEST_ID_="dabfd41a-cc70-42df-9a77-9deedd883ebb"
+                            PIC_ROOT_ALIAS_="PhotosRoot">
+                            <Category CA="17" SBCA="19" SC="14" MW_="16556" AN="3" />
+                            <Measure SPEE="76" SPEE_EXCESS_="0" LENG="2017" LENG_EXCESS_="0"
+                                VVTM_="207" VVDT="3234" DTB1="194" DTLB="437" TOWT_KG_="23329"
+                                TOWT_EXCESS_="3313" TOWT_VALID_="OV" TOWL_KG_="10008"
+                                TOWR_KG_="10008" PICTURE_="010" INFRACTION_1_="0" INFRACTION_2_="0"
+                                INFRACTION_3_="0" OVERLAP_="False" AVOIDANCE_="True"
+                                UNCENTERED_="False" />
+                            <Axle n="1" WT_="8121" WT_EXCESS_="0" WT_QUALIT_="1" DT="154"
+                                WTL_="4060" WTR_="4061" WTLR_BOOL_MEAS_="False" WD="225" SH="-28" />
+                            <Axle n="2" WT_="6616" WT_EXCESS_="0" WT_QUALIT_="2" DT="600"
+                                WTL_="3308" WTR_="3308" WTLR_BOOL_MEAS_="False" WD="225" SH="-25" />
+                            <Axle n="3" WT_="5279" WT_EXCESS_="0" WT_QUALIT_="1" DT="133"
+                                WTL_="2639" WTR_="2640" WTLR_BOOL_MEAS_="False" WD="225" SH="-26" />
+                            <AxleGroup n="1" AG_TYPE_="1" AG_TOWT_="8121" AG_TOWT_EXCESS_="0"
+                                AG_WT_AXLE_1_="8121" />
+                            <AxleGroup n="2" AG_TYPE_="2" AG_TOWT_="11895" AG_TOWT_EXCESS_="0"
+                                AG_WT_AXLE_1_="6616" AG_WT_AXLE_2_="5279" />
+                        </Vehicle>
+                    </Detection>
+                </VehicleDetectionCollection>
+            </tns:ProcessVehicleDetectionResult>
+        </tns:ProcessVehicleDetectionResponse>
+    </soap:Body>
+</soap:Envelope>

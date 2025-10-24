@@ -1,0 +1,33 @@
+datasource db {
+  provider = "sqlserver"
+  url      = env("MSSQL_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model WimBacklog {
+  id                String   @id @default(uuid())
+  crossingIndexCode String   @unique @map("crossingIndexCode") @db.VarChar(64)
+  datetime          DateTime @map("datetime")
+  plate             String   @map("plate") @db.NText
+  plateProvince     String?  @map("plate_province") @db.NText
+  totalAxles        Int      @map("total_axles")
+  totalLength       Float    @map("total_length")
+  totalWidth        Float    @map("total_width")
+  outcome           String   @map("outcome") @db.NText
+  totalWeight       Float    @map("total_weight")
+  weightLimit       Float    @map("weight_limit")
+  speed             Float?   @map("speed")
+  vehicleClass      String?  @map("vehicle_class") @db.NText
+  vehicleType       String?  @map("vehicle_type") @db.NText
+  lane              String   @default("1") @map("lane") @db.NText
+  overviewImage     String?  @map("overview_image") @db.Text
+  plateImage        String?  @map("plate_image") @db.Text
+  axlesJson         String?  @map("axles") @db.NText
+  createdAt         DateTime @default(now()) @map("created_at")
+
+  @@index([crossingIndexCode])
+  @@map("WimBacklog")
+}
